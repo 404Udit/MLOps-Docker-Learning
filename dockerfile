@@ -1,5 +1,5 @@
 # Use an Official Python runtime as a parent image
-FROM python:3.8-slim
+FROM python:3.10-slim
 
 # set the working directory in the container
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Define environment variable
-ENV FLASK_APP = app.python
+ENV FLASK_APP=app.py
 
 # Run the Flsak app
 CMD ["flask","run","--host=0.0.0.0"]
